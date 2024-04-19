@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>點擊網格</title>
+    <style>
+        /* 定義網頁樣式 */
+        body {
+            background-color: purple;
+            color: white;
+            font-family: 'Bitmap Song', serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-gap: 10px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .grid-item {
+          border-radius:30px;
+            width: 80px;
+            height: 80px;
+            background-color: #F0F0F0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            text-align: center;
+           font-family: Copperplate , serif;
+        }
+
+        .yellow {
+            background-color: #ff0;
+        }
+
+        .green {
+            background-color: #0f0;
+        }
+
+        .purple {
+            background-color: #f0f;
+        }
+
+        header, footer {
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1, b {
+            color: purple;
+            text-align: center;
+            font-style: italic;
+            font-family: 'STSong', serif;
+            background-color: white;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function createDynamicGrid() {
+            // 用戶輸入
+            var gridSize = prompt("輸入網格的大小:");
+
+            // 檢查用戶是否輸入有效數字
+            if (gridSize && !isNaN(gridSize) && gridSize > 0) {
+                var gridContainer = document.getElementById('gridContainer');
+
+                // 清空任何現有網格
+                gridContainer.innerHTML = '';
+
+                // 設置網格佈局
+                gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+
+                // 創建網格
+                for (var i = 1; i <= gridSize * gridSize; i++) {
+                    var gridItem = document.createElement('div');
+                    gridItem.className = 'grid-item';
+                    gridItem.textContent = i;
+
+                    // 為網格項目附加事件
+                    gridItem.addEventListener('click', function() {
+                        var clickCount = parseInt(this.getAttribute('data-click-count')) || 0;
+
+                        clickCount++;
+
+                        if (clickCount === 1) {
+                            this.classList.add('yellow');
+                        } else if (clickCount === 2) {
+                            this.classList.remove('yellow');
+                            this.classList.add('green');
+                        } else if (clickCount === 3) {
+                            this.classList.remove('green');
+                            this.classList.add('purple');
+                        } else if (clickCount === 4) {
+                            this.classList.remove('purple');
+                            clickCount = 0;
+                        }
+
+                        this.setAttribute('data-click-count', clickCount.toString());
+                    });
+
+                    // 將網格項目附加網格方格
+                    gridContainer.appendChild(gridItem);
+                }
+            } else {
+                alert("請輸入有效的數字。");
+            }
+        }
+
+        // 當加載完成時運行函數
+        window.onload = createDynamicGrid;
+    </script>
+</head>
+<body>
+<header>
+    <h1><i>點擊網格</i></h1>
+</header>
+
+<div class="button-container">
+    <button onclick="createDynamicGrid()"><b><i>創立實時網格</i></b></button>
+</div>
+
+<div id="gridContainer" class="grid-container"></div>
+
+<div style="margin-bottom: 40px;"></div>
+
+<footer>
+    <br>
+    <br>
+    <b style="color: purple; display: block; margin: 0 auto; text-align: center;"><i>練習單元</i></b>
+</footer>
+</body>
+</html
