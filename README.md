@@ -9,7 +9,7 @@ Here are some ideas to get you started:
 - 🌱 I’m currently learning:math
 - 💞️ I’m looking to collaborate on:not
 - 📫 How to reach me:gmail
-- 😄 Pronouns:not
+- 😄 Pronouns:not 
 - ⚡ Fun fact:not
 
 <!---
