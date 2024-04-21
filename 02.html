@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'PingFang HK'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;<span class="s1">點擊網格</span>&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* <span class="s1">定義網頁樣式</span> */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: purple;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Bitmap Song', serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.grid-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.grid-item {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>border-radius:30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #F0F0F0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: blue;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>font-family: Copperplate , serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.yellow {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ff0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.green {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #0f0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.purple {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f0f;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header, footer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1, b {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: purple;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'STSong', serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.button-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.button-container button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function createDynamicGrid() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">用戶輸入</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>var gridSize = prompt("<span class="s1">輸入網格的大小</span>:");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">檢查用戶是否輸入有效數字</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (gridSize &amp;&amp; !isNaN(gridSize) &amp;&amp; gridSize &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var gridContainer = document.getElementById('gridContainer');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="s1">清空任何現有網格</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>gridContainer.innerHTML = '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="s1">設置網格佈局</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="s1">創建網格</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>for (var i = 1; i &lt;= gridSize * gridSize; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>var gridItem = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>gridItem.className = 'grid-item';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>gridItem.textContent = i;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// <span class="s1">為網格項目附加事件</span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>gridItem.addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>var clickCount = parseInt(this.getAttribute('data-click-count')) || 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>clickCount++;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (clickCount === 1) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>this.classList.add('yellow');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>} else if (clickCount === 2) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>this.classList.remove('yellow');</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>this.classList.add('green');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>} else if (clickCount === 3) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>this.classList.remove('green');</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>this.classList.add('purple');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>} else if (clickCount === 4) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>this.classList.remove('purple');</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>clickCount = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.setAttribute('data-click-count', clickCount.toString());</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// <span class="s1">將網格項目附加網格方格</span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>gridContainer.appendChild(gridItem);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert("<span class="s1">請輸入有效的數字。</span>");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">當加載完成時運行函數</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.onload = createDynamicGrid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;&lt;i&gt;<span class="s1">點擊網格</span>&lt;/i&gt;&lt;/h1&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="button-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="createDynamicGrid()"&gt;&lt;b&gt;&lt;i&gt;<span class="s1">創立實時網格</span>&lt;/i&gt;&lt;/b&gt;&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="gridContainer" class="grid-container"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div style="margin-bottom: 40px;"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;b style="color: purple; display: block; margin: 0 auto; text-align: center;"&gt;&lt;i&gt;<span class="s1">練習單元</span>&lt;/i&gt;&lt;/b&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html</p>
+</body>
+</html>
